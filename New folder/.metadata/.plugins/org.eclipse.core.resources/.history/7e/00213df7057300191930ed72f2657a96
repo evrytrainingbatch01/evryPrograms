@@ -1,0 +1,20 @@
+package com.evry.springproject.TestService;
+
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import com.evry.springproject.Dao.UserDAO;
+import com.evry.springproject.Service.UserServiceImpl;
+
+@RunWith(MockitoJUnitRunner.class)
+public class TestUserService {
+	
+	@Mock
+	UserDAO userDao;
+	
+	@InjectMocks
+	UserServiceImpl userServiceImpl;
+
+}

@@ -1,0 +1,31 @@
+package com.evry.testcase.dao;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.evry.springproject.Dao.UserDAO;
+import com.evry.springproject.Domain.User;
+import org.springframework.test.annotation.Rollback;
+import junit.framework.TestCase;
+
+public class TestUserDaoImpl extends TestCase {
+	
+	@Autowired
+	private UserDAO userDao;
+	
+	
+	
+	@Test
+    @Transactional
+    @Rollback(true)
+	public void testFindUserById() {
+	User theUser = userDao.getCustomer(this.us);
+	
+	
+	assertEquals(this.book.getAuthor(), book.getAuthor());
+	assertEquals(this.book.getDescription(), book.getDescription());
+	assertEquals(this.book.getIsbn(), book.getIsbn());
+	}
+	
+
+}

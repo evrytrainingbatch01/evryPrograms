@@ -1,0 +1,28 @@
+package com.evry.testcases;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class TestEmployeeDetails {
+	
+	 EmpBusinessLogic empBusinessLogic = new EmpBusinessLogic();
+	   Employee employee = new Employee();
+
+	 //test to check appraisal
+	   @Test
+	   public void testCalculateAppriasal() {
+		   
+		   
+	      employee.setName("Rajeev");
+	      employee.setAge(25);
+	      employee.setMonthlySalary(8000);
+			
+	      double appraisal = empBusinessLogic.calculateAppraisal(employee);
+	      assertEquals(500, appraisal,2);
+	      
+	      
+	   }
+	   
+	   
+}

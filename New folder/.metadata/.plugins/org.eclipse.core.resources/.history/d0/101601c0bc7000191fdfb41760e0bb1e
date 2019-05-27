@@ -1,0 +1,54 @@
+package com.evry.testcase.dao;
+
+import java.util.List;
+
+import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
+
+import org.hibernate.SessionFactory;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
+
+import com.evry.springproject.Config.DemoAppConfig;
+import com.evry.springproject.Dao.UserDAO;
+import com.evry.springproject.Domain.User;
+import org.springframework.test.annotation.Rollback;
+
+import junit.framework.TestCase;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes= DemoAppConfig.class)
+@WebAppConfiguration
+public class TestUserDaoImpl extends TestCase {
+
+	@Autowired
+	private UserDAO userDao;
+	
+    @PersistenceContext
+	private SessionFactory sessionFactory;
+    
+    
+
+	@Test
+	@Transactional
+	public void testFindUserById() {
+		
+		User theUser = userDao.getCustomer(1);
+		
+		Assert.assertEquals("arp", theUser.getName());
+        Assert.assertEquals("arp123456@gmail.com", theUser.getEmail());
+        Assert.assertEquals("243432423", theUser.getMobile());
+        return;
+		
+		
+		
+	}
+
+	
+	
+}

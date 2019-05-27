@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UserServiceImplTest" project="Spring-RWS-mvc-JavaConfig-Bank-Application" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.evry.springproject.TestService.UserServiceImplTest" time="0.12">
+    <testcase name="addUserTest" classname="com.evry.springproject.TestService.UserServiceImplTest" time="0.096"/>
+    <testcase name="updateUserTest" classname="com.evry.springproject.TestService.UserServiceImplTest" time="0.004"/>
+    <testcase name="getUserTest" classname="com.evry.springproject.TestService.UserServiceImplTest" time="0.008"/>
+    <testcase name="deleteUserTest" classname="com.evry.springproject.TestService.UserServiceImplTest" time="0.012"/>
+  </testsuite>
+</testrun>

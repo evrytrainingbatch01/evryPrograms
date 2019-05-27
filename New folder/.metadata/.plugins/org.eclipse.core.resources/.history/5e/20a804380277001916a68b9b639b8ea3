@@ -1,0 +1,58 @@
+package com.evry.springproject.TestService;
+
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import com.evry.springproject.Dao.UserDAO;
+import com.evry.springproject.Domain.User;
+import com.evry.springproject.Service.UserServiceImpl;
+
+@RunWith(MockitoJUnitRunner.class)
+public class TestUserService {
+
+	@Mock
+	UserDAO userDao;
+
+	@InjectMocks
+	UserServiceImpl userServiceImpl;
+
+	@Test
+	public void getUserTest() {
+
+		when(userDao.getUser(2)).thenReturn(null);
+
+		User user = new User();
+
+		user.setId(2);
+		user.setEmail("arp@gmail.com");
+		user.setMobile(9343323451L);
+		user.setName("arp");
+
+		// assertThat(userServiceImpl.getUser(2), is(notNullValue()));
+		// assertEquals(userDao.getUser(2)).ise userServiceImpl.getUser(2));
+
+	}
+
+	@Test
+	public void addUserTest() {
+
+		User user = new User();
+
+		user.setId(2);
+		user.setEmail("arp@gmail.com");
+		user.setMobile(9343323451L);
+		user.setName("arp");
+
+		
+
+		userDao.saveUser(user);
+
+	}
+
+}

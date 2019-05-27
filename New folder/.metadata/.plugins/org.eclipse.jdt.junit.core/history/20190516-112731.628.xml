@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestUserService" project="Spring-RWS-mvc-JavaConfig-Bank-Application" tests="2" started="0" failures="0" errors="1" ignored="0">
+  <testsuite name="com.evry.springproject.TestService.TestUserService" incomplete="true">
+    <error>org.mockito.exceptions.base.MockitoException: 
+Cannot instantiate @InjectMocks field named 'userService'.
+You haven't provided the instance at field declaration so I tried to construct the instance.
+However, I failed because: the type 'UserService' is an interface.
+Examples of correct usage of @InjectMocks:
+   @InjectMocks Service service = new Service();
+   @InjectMocks Service service;
+   //also, don't forget about MockitoAnnotations.initMocks();
+   //and... don't forget about some @Mocks for injection :)
+&#13;
+	at org.mockito.internal.runners.JUnit45AndHigherRunnerImpl$1.withBefores(JUnit45AndHigherRunnerImpl.java:27)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:276)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.mockito.internal.runners.JUnit45AndHigherRunnerImpl.run(JUnit45AndHigherRunnerImpl.java:37)&#13;
+	at org.mockito.runners.MockitoJUnitRunner.run(MockitoJUnitRunner.java:62)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
+Caused by: org.mockito.exceptions.base.MockitoException: the type 'UserService' is an interface.&#13;
+	... 18 more&#13;
+&#13;
+</error>
+    <testcase name="addUserTest" classname="com.evry.springproject.TestService.TestUserService" incomplete="true"/>
+    <testcase name="getUserTest" classname="com.evry.springproject.TestService.TestUserService" incomplete="true"/>
+  </testsuite>
+</testrun>

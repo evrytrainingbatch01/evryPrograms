@@ -1,0 +1,15 @@
+package com.evry.basicExamples;
+
+import java.util.function.Predicate;
+
+public class PredicateExampleDemo {
+
+	public static void main(String[] args) {
+
+		Predicate<Integer> p=i->i%2==0;
+		
+		
+		
+	}
+
+}

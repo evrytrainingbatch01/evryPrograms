@@ -1,0 +1,17 @@
+package com.evry.basicExamples;
+
+
+interface inter{
+	public void add();
+		
+	}
+}
+
+public class MethodRefrenceExampleDemo  {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

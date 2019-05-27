@@ -1,0 +1,27 @@
+INDEX VERSION 1.131
+C:\Evry\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\306700585.index
+\Spring-mvc-Xml-Applying-Validations-Customer\src\main\resources
+C:\Evry\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\619042381.index
+\1.SpringM-NoXML-Security-Demo\src\main\java
+C:\Evry\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1929728614.index
+\SpringWebX-Soap-CXF-BottomUp-Book-Project\src\main\java
+C:\Evry\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3373495056.index
+\Spring-mvc-RWS-XmlConfig-Bank-Application\src\main\java
+C:\Evry\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\34329928.index
+\Spring-xmlConfig-mvc-Rest-Bank-Application\src\main\java
+C:\Evry\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4271884796.index
+\Spring-RWS-mvc-JavaConfig-MockitoTestCases-Bank-Application\src\main\java
+C:\Evry\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1510006273.index
+\SpringX-mvc-Rest-Bank-Application\src\main\java
+C:\Evry\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2013743015.index
+\Spring-mvc-Xml-Applying-Validations-Customer\src\main\java
+C:\Evry\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\430625410.index
+\Spring-RWS-mvc-JavaConfig-OverJpa-Bank-Application2\src\main\java
+C:\Evry\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2722569252.index
+\Spring-javaConfig-mvc-Rest-Bank-Application\src\main\java
+C:\Evry\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2728335791.index
+\Spring-RWS-mvc-XmlConfig-Bank-Application2\src\main\java
+C:\Evry\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1132909273.index
+\Spring-RWS-JavaConfig-OverJpa-Bank-Application\src\main\resources
+C:\Evry\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4289583967.index
+\Spring-RWS-mvc-JavaConfig-Bank-Application\src\main\resources

@@ -1,0 +1,8 @@
+package com.evry.springproject.TestService;
+
+import org.junit.runner.RunWith;
+
+@RunWith(MockitoJUnitRunner.class)
+public class TestUserService {
+
+}

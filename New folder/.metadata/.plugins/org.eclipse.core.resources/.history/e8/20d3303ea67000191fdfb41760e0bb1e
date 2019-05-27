@@ -1,0 +1,7 @@
+package com.evry.testcase.dao;
+
+import junit.framework.TestCase;
+
+public class TestUserDaoImpl extends TestCase {
+
+}

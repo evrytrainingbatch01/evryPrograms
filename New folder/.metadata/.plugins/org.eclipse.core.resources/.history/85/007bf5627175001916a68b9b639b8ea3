@@ -1,0 +1,22 @@
+#
+# JDBC connection properties
+#
+jdbc.driver=com.mysql.cj.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/springxmlrestbank?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+jdbc.username=RenukaPrasada
+jdbc.password=pass123
+
+
+# Hibernate properties
+#
+hibernate.dialect=org.hibernate.dialect.MySQLDialect
+hibernate.show_sql=true
+hibernate.hbm2ddl.auto=create-drop
+hibernate.packagesToScan=com.evry.springproject.Domain
+hibernate.format_sql=true
+hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
+
+#Hibernate Configuration
+#
+
+

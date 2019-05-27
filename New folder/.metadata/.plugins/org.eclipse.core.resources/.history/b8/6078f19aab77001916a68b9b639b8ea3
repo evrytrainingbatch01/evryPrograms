@@ -1,0 +1,78 @@
+package com.evry.springproject.TestService;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.CoreMatchers.any;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.when;
+
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import com.evry.springproject.Dao.UserDAO;
+import com.evry.springproject.Domain.User;
+import com.evry.springproject.Service.UserService;
+import com.evry.springproject.Service.UserServiceImpl;
+
+@RunWith(MockitoJUnitRunner.class)
+public class TestUserService {
+
+	@Mock
+	UserDAO userDao;
+
+	UserService userService;
+	
+	
+	@Before
+    public void setUp() throws Exception {
+
+        MockitoAnnotations.initMocks(this);
+        
+        userService=new UserServiceImpl();
+    }
+
+
+	@Test
+	public void getUserTest() {
+
+		when(userDao.getUser(2)).thenReturn(new User());
+
+		User user = new User();
+
+		user.setId(2);
+		user.setEmail("arp@gmail.com");
+		user.setMobile(9343323451L);
+		user.setName("arp");
+		
+		assertThat(user.getName()).isEqualTo("arp");
+
+		//assertThat(userService.getUser(2),is(notNullValue()));
+		// assertEquals(userDao.getUser(2),userService.getUser(2));
+
+
+
+	}
+
+	@Test
+	public void addUserTest() {
+
+		 when(userDao.saveUser(user)).thenReturn(new User());
+
+         User theUser = new User();
+
+         assertThat(userService.addUser(theUser), is(notNullValue());
+        
+     }
+
+	
+
+}

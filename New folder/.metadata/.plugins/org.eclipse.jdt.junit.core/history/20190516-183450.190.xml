@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UserServiceImplTest.updateUserTest" project="Spring-RWS-mvc-JavaConfig-Bank-Application" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="updateUserTest" classname="com.evry.springproject.TestService.UserServiceImplTest" time="0.092"/>
+</testrun>

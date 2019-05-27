@@ -1,0 +1,35 @@
+package com.evry.testcase.dao;
+
+import javax.transaction.Transactional;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import com.evry.springproject.Config.DemoAppConfig;
+import com.evry.springproject.Dao.UserDAO;
+import com.evry.springproject.Domain.User;
+import org.springframework.test.annotation.Rollback;
+
+import junit.framework.TestCase;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(class = { DemoAppConfig.class })
+@WebAppConfiguration(value = "")
+public class TestUserDaoImpl extends TestCase {
+
+	@Autowired
+	private UserDAO userDao;
+
+	@Test
+	@Transactional
+	public void testFindUserById() {
+		User theUser = userDao.getCustomer(us);
+
+		assertEquals(this.book.getAuthor(), book.getAuthor());
+		assertEquals(this.book.getDescription(), book.getDescription());
+		assertEquals(this.book.getIsbn(), book.getIsbn());
+	}
+
+}
