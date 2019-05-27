@@ -1,0 +1,53 @@
+<h2>Languages spoken</h2>
+	<p>You speak <span th:text="${model.languages.size() >=3} ? '3 or more' : ${model.languages.size()}" >x</span> languages</p>
+
+
+
+	<ul th:if="${model.languages.size() >=3}"  >
+		<li th:each="language : ${model.languages}" th:text="${language}">language1</li>
+	</ul>
+
+<select th:field="*{type}">
+<option th:each="type : ${allTypes}"
+th:value="${type}"
+th:text="#{${'seedstarter.type.' + type}}">Wireframe</option>
+</select>
+
+
+<div class="container">
+
+<select id="bookName" name="bookName"  th:value="*{books}">
+			<option value="bookName" selected="selected"  >Book Name</option>
+			<option th:each="book : ${books}" th:text="${book.getBook_name()}"
+				th:value="book.id">Book Name</option>
+		</select> 
+
+
+
+		<select id="bookName" name="bookName"  th:field="*{books}">
+			<option value="bookName" selected="selected"  >Book Name</option>
+			<option th:each="book : ${booksmodel}" th:text="${book.getBook_name()}"
+				value="XXX">Book Name</option>
+		</select> 
+		
+		<select id="AuthorName" name="AuthorName"  th:field="*{books}">
+			<option value="Author" selected="selected">Author Name</option>
+			<option th:each="book : ${booksmodel}" th:text="${book.getAuthor()}"	value="XXX">AuthorName</option>
+		</select> 
+		
+		<!-- <input type="text" th:field="*{bar}" /> -->
+		
+		<!-- <select id="BookType" name="BookType" th:field="*{books}">
+			<option value="BookType" selected="selected">Book Type</option>
+			<option th:each="book : ${books}" th:text="${book.getBook_type()}"	value="XXX">Book Type</option>
+		</select> -->
+		 <input type="submit" value="Search Books" class="button" />
+
+	</div>
+
+
+ @Query("SELECT con FROM Contact con  WHERE con.phoneType=(:pType) AND con.lastName= (:lName)")
+    List<Contact> findByLastNameAndPhoneType(@Param("pType") PhoneType pType, @Param("lName") String lName);
+ 
+
+

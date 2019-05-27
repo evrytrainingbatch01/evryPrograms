@@ -1,0 +1,126 @@
+C:\Users\Renuka.Prasada\Documents\dumps\Dump20190405
+
+POST http://localhost:3759/addCustomer
+Input: id means customer_id
+{
+    "id": 2,
+    "name": "Ramesh",
+    "emailId": "rms.gs@gmail.com",
+    "dateOfBirth": "2011-11-01T18:30:00.000+0000",
+    "address": "Madiwala",
+    "city": "Bengaluru",
+    "country": "Ind",
+    "mobileNo": 909900,
+    "loginId": 2894993,
+    "password": "ZLBH8WLLG2TYRLNBT",
+    "userType": 0,
+    "accountStatus": 0,
+    "lastUpdated": null,
+    "account": null
+}
+
+GET http://localhost:3759/getCustomer/1
+
+
+Input :GET http://localhost:3759/getCustomer/{customer_id}
+
+Output:Customer Details with particular {customer_id}
+
+{
+    "id": 1,   {id means customer_id}
+    "name": "Arp",
+    "emailId": "Arp@gmail.com",
+    "dateOfBirth": "2011-11-01T18:30:00.000+0000",
+    "address": "tumkure",
+    "city": "Bengaluru",
+    "country": "Ind",
+    "mobileNo": 909900,
+    "loginId": 3492119,
+    "password": "XAMBENONH5AV444VM",
+    "userType": 0,
+    "accountStatus": 0,
+    "lastUpdated": null,
+    "account": null
+}
+
+
+GET http://localhost:3759/getAllCustomers
+@GetMapping("/getAllCustomers")
+
+Input:{getAllCustomers}-->getting all Customers
+Output:list of Customers
+
+{
+        "id": 3,  {id means customer_id}
+        "name": "sushma",
+        "emailId": "sushma@gmail.com",
+        "dateOfBirth": "2001-02-01T18:30:00.000+0000",
+        "address": "Gubbi",
+        "city": "Bengaluru",
+        "country": "Ind",
+        "mobileNo": 909900,
+        "loginId": 4305770,
+        "password": "DLX26L5CIYWSX08BQ",
+        "userType": 0,
+        "accountStatus": 0,
+        "lastUpdated": null,
+        "account": null
+    }
+
+PUT http://localhost:3759/updateCustomer/3
+
+Input:
+@PutMapping("/updateCustomer/{Customer_id}")
+
+{
+    "id": 3,   {id means customer_id}
+    "name": "sushma",
+    "emailId": "sushma@gmail.com",
+    "dateOfBirth": "2001-02-01T18:30:00.000+0000",
+    "address": "Gubbi",
+    "city": "Tumkure",-------->City updating
+    "country": "Ind",
+    "mobileNo": 909900,
+    "loginId": 4305770,
+    "password": "DLX26L5CIYWSX08BQ",
+    "userType": 0,
+    "accountStatus": 0,
+    "lastUpdated": null,
+    "account": null
+}
+
+Output:
+
+{
+    "id": 3,   {id means customer_id}
+    "name": "sushma",
+    "emailId": "sushma@gmail.com",
+    "dateOfBirth": "2001-02-01T18:30:00.000+0000",
+    "address": "Gubbi",
+    "city": "Tumkure",  ----City details updated
+    "country": "Ind",
+    "mobileNo": 909900,
+    "loginId": 4305770,
+    "password": "DLX26L5CIYWSX08BQ",
+    "userType": 0,
+    "accountStatus": 0,
+    "lastUpdated": null,
+    "account": null
+}
+
+
+DELETE http://localhost:3759/deleteCustomer/3
+
+Input:@DeleteMapping("/deleteCustomer/{Customer_id}")
+
+{id means customer_id}
+
+Login Customer
+@PostMapping("/login/{customerId}/{customerLoginId}/{password}")
+POST http://localhost:3759/login/1{customerid}/3492119{loginId}/XAMBENONH5AV444VM{password}
+
+
+Reset Password
+
+PUT http://localhost:3759/login/3492119/111
+

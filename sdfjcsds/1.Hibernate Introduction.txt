@@ -1,0 +1,125 @@
+
+Hibernate
+
+
+Hibernate is an open source object relational mapping (ORM) tool that provides a framework to map object-oriented domain models 
+to relational databases for web applications.
+
+Benefites:
+ORM:Hibernate ORM easily solves the data mismatch found between the object oriented classes of an application and relational database.
+
+Transparent Persistence:Hibernate’s transparent persistence ensures automatic connection between the application’s objects with the database tables. 
+
+Database independent:Hibernate is database independent. It can be used to connect with any database like Oracle, MySQL, Sybase and DB2 to name a few.
+
+HQL:Hibernate supports a powerful query language called HQL (Hibernate Query Language). This query language is more powerful than SQL and is completely object oriented. 
+HQL’s advanced features like pagination and dynamic profiling are not present in SQL.
+
+Dual-layer Caching:Hibernate supports both first level and second level caching mechanisms. The first level caching is associated with Session object which is used by default. 
+The second level caching is associated with Session Factory object.
+Through caching concept, Hibernate retains the objects in cache so as to reduce repeated hits to the database. 
+This feature makes Hibernate highly scalable and optimizes the application’s performance.
+
+Open Source:The lazy-loading concept fetches only the necessary object that is required for the execution of an application.
+
+For example, if there is one parent class and n number of child classes, during an execution, there is no need to load all the child classes. 
+Instead, only the class that is required for the query or join need to be loaded. 
+This concept of lazy-loading prevents the unnecessary loading of objects. It enhances the performance of the application.
+
+Easy to Learn:
+Hibernate is developer friendly. It is easy to learn and implement. As the framework takes care of the changes made to the database automatically,
+ a developer’s work is reduced to a great extent.
+Note:
+Hibernate 5.2 Requires Java 8
+
+This course uses Hibernate 5.2.
+
+Hibernate 5.2 requires Java 8. 
+
+Required Software:Mysql Workbench 6.3 and mysql 5.7 (Connectivity link "hbstudenttracker?useSSL=false&serverTimezone=UTC")
+
+In order to run the examples in this course, you will need have Java 8 installed.
+
+Q:How does jdbc relate to ibernate?
+ans:
+
+
+QUESTION:
+Why we are using JPA Annotation instead of Hibernate ?
+
+For example, why we are not using this org.hibernate.annotations.Entity?
+
+ANSWER:
+JPA is a standard specification. Hibernate is an implementation of the JPA specification.
+
+Hibernate implements all of the JPA annotations.
+
+The Hibernate team recommends the use of JPA annotations as a best practice.
+
+
+
+Session Factory:Reads the Hibernate configuration file, creates session objects ,Heavy weight object,only once in our app
+Session:Wraps a Jdbc connection,main object used to save or retrieve objects,short lived objects,Retrived from Session factory
+
+
+one to one uni and bi
+one to many uni and bi
+many to many uni and bi
+
+EAGER: Convenient, but slow
+LAZY: More coding, but much more efficient
+
+**********Understanding Hibernate First Level Cache with Example:***********
+
+Caching is a facility provided by ORM frameworks which help users to get fast running web application,
+ while help framework itself to reduce number of queries made to database in a single transaction. 
+Hibernate achieves the second goal by implementing first level cache.
+
+Fist level cache in hibernate is enabled by default and you do not need to do anything to get this functionality working.
+ In fact, you can not disable it even forcefully.
+
+Its easy to understand the first level cache if we understand the fact that it is associated with Session object.
+ As we know session object is created on demand from session factory and it is lost, once the session is closed. Similarly,
+ first level cache associated with session object is available only till session object is live. 
+It is available to session object only and is not accessible to any other session object in any other part of application
+
+Important facts:
+
+First level cache is associated with “session” object and other session objects in application can not see it.
+
+The scope of cache objects is of session. Once session is closed, cached objects are gone forever.
+
+First level cache is enabled by default and you can not disable it.
+
+When we query an entity first time, it is retrieved from database and stored in first level cache associated with hibernate session.
+
+If we query same object again with same session object, it will be loaded from cache and no sql query will be executed.
+
+The loaded entity can be removed from session using evict() method. The next loading of this entity will again make a database call if it has been removed using evict() method.
+
+The whole session cache can be removed using clear() method. It will remove all the entities stored in cache
+
+**********How Hibernate Second Level Cache Works?:****************
+
+Caching is facility provided by ORM frameworks which help users to get fast running web application, while help framework itself to reduce number of queries made to database in a single transaction. Hibernate also provide this caching functionality, in two layers.
+
+Fist level cache: This is enabled by default and works in session scope. Read more about hibernate first level cache.
+Second level cache: This is apart from first level cache which is available to be used globally in session factory scope.
+Above statement means, second level cache is created in session factory scope and is available to be used in all sessions which are created using that particular session factory.
+It also means that once session factory is closed, all cache associated with it die and cache manager also closed down.
+
+How second level cache works
+Lets write all the facts point by point:
+
+Whenever hibernate session try to load an entity, the very first place it look for cached copy of entity in first level cache (associated with particular hibernate session).
+If cached copy of entity is present in first level cache, it is returned as result of load method.
+If there is no cached entity in first level cache, then second level cache is looked up for cached entity.
+If second level cache has cached entity, it is returned as result of load method. But, before returning the entity, it is stored in first level cache also so that next invocation to load method for entity will return the entity from first level cache itself, and there will not be need to go to second level cache again.
+If entity is not found in first level cache and second level cache also, then database query is executed and entity is stored in both cache levels, before returning as response of load() method.
+Second level cache validate itself for modified entities, if modification has been done through hibernate session APIs.
+If some user or process make changes directly in database, the there is no way that second level cache update itself until “timeToLiveSeconds” duration has passed for that cache region. In this case, it is good idea to invalidate whole cache and let hibernate build its cache once again. You can use below code snippet to invalidate whole hibernate second level cache.
+
+
+
+
+

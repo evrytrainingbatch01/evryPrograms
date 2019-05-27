@@ -1,0 +1,13 @@
+•	Java 8 --4
+•	JPA 2----4
+•	Hibernate 5---4
+•	Spring 4----4
+•	Lombok 1.16
+•	Jetty 9---2
+•	Maven 3---3
+•	CXF 3 - SOAP---1
+•	SLF4J 1.7---1
+•	Logback 1.1
+•	JUnit 4----2
+•	Mockito 1.10
+•	Orika 1.4
